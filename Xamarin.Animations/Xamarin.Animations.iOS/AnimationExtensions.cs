@@ -19,12 +19,12 @@
         /// <param name="onFinished">On finished.</param>
         public static void Fade(this UIView view, AnimationTransition transition, double duration = AnimationConstants.DefaultDuration, Action onFinished = null)
         {
-            view.Alpha = transition == AnimationTransition.In ? AnimationConstants.MinAlpha : AnimationConstants.MaxAlpha;
+            view.Alpha = transition == AnimationTransition.In ? (nfloat)AnimationConstants.MinAlpha : (nfloat)AnimationConstants.MaxAlpha;
             view.Transform = CGAffineTransform.MakeIdentity();
             UIView.Animate(duration, 0, UIViewAnimationOptions.CurveEaseInOut,
                 () =>
                 {
-                    view.Alpha = transition == AnimationTransition.In ? AnimationConstants.MaxAlpha : AnimationConstants.MinAlpha;
+                    view.Alpha = transition == AnimationTransition.In ? (nfloat)AnimationConstants.MaxAlpha : (nfloat)AnimationConstants.MinAlpha;
                 },
                 onFinished
             );
@@ -46,19 +46,19 @@
             var isLtr = (transition == AnimationTransition.In && (direction == AnimationDirection.Down || direction == AnimationDirection.Left)) || (transition == AnimationTransition.Out && (direction == AnimationDirection.Up || direction == AnimationDirection.Right));
 
             var minTransform = CATransform3D.Identity;
-            minTransform.m34 = AnimationConstants.M34;
+            minTransform.m34 = (nfloat)AnimationConstants.M34;
             minTransform = minTransform.Rotate((nfloat)((isLtr ? 1 : -1) * Math.PI * 0.5), (nfloat)(isVertical ? 1.0f : 0.0f), (nfloat)(isHorizontal ? 1.0f : 0.0f), (nfloat)0.0f);
             var maxTransform = CATransform3D.Identity;
-            maxTransform.m34 = AnimationConstants.M34;
+            maxTransform.m34 = (nfloat)AnimationConstants.M34;
 
-            view.Alpha = isIn ? AnimationConstants.MinAlpha : AnimationConstants.MaxAlpha;
+            view.Alpha = isIn ? (nfloat)AnimationConstants.MinAlpha : (nfloat)AnimationConstants.MaxAlpha;
             view.Layer.Transform = isIn ? minTransform : maxTransform;
             UIView.Animate(duration, 0, UIViewAnimationOptions.CurveEaseInOut,
                 () =>
                 {
                     view.Layer.AnchorPoint = new CGPoint((nfloat)0.5, (nfloat)0.5f);
                     view.Layer.Transform = isIn ? maxTransform : minTransform;
-                    view.Alpha = isIn ? AnimationConstants.MaxAlpha : AnimationConstants.MinAlpha;
+                    view.Alpha = isIn ? (nfloat)AnimationConstants.MaxAlpha : (nfloat)AnimationConstants.MinAlpha;
                 },
                 onFinished
             );
@@ -79,12 +79,12 @@
 
             var isIn = transition == AnimationTransition.In;
 
-            view.Alpha = isIn ? AnimationConstants.MinAlpha : AnimationConstants.MaxAlpha;
+            view.Alpha = isIn ? (nfloat)AnimationConstants.MinAlpha : (nfloat)AnimationConstants.MaxAlpha;
             view.Transform = isIn ? minTransform : maxTransform;
             UIView.Animate(duration, 0, UIViewAnimationOptions.CurveEaseInOut,
                 () =>
                 {
-                    view.Alpha = isIn ? AnimationConstants.MaxAlpha : AnimationConstants.MinAlpha;
+                    view.Alpha = isIn ? (nfloat)AnimationConstants.MaxAlpha : (nfloat)AnimationConstants.MinAlpha;
                     view.Transform = isIn ? maxTransform : minTransform;
                 },
                 onFinished
@@ -100,10 +100,10 @@
         /// <param name="onFinished">On finished.</param>
         public static void Scale(this UIView view, AnimationTransition transition, double duration = AnimationConstants.DefaultDuration, Action onFinished = null)
         {
-            var minAlpha = (nfloat)0.0f;
-            var maxAlpha = (nfloat)1.0f;
-            var minTransform = CGAffineTransform.MakeScale((nfloat)0.1, (nfloat)0.1);
-            var maxTransform = CGAffineTransform.MakeScale((nfloat)1, (nfloat)1);
+            var minAlpha = (nfloat)AnimationConstants.MinAlpha;
+            var maxAlpha = (nfloat)AnimationConstants.MaxAlpha;
+            var minTransform = CGAffineTransform.MakeScale((nfloat)AnimationConstants.MinScale, (nfloat)AnimationConstants.MinScale);
+            var maxTransform = CGAffineTransform.MakeScale((nfloat)AnimationConstants.MaxScale, (nfloat)AnimationConstants.MaxScale);
 
             var isIn = transition == AnimationTransition.In;
 
@@ -167,12 +167,12 @@
             var minTransform = CGAffineTransform.MakeScale((nfloat)2.0, (nfloat)2.0);
             var maxTransform = CGAffineTransform.MakeScale((nfloat)1, (nfloat)1);
 
-            view.Alpha = isIn ? AnimationConstants.MinAlpha : AnimationConstants.MaxAlpha;
+            view.Alpha = isIn ? (nfloat)AnimationConstants.MinAlpha : (nfloat)AnimationConstants.MaxAlpha;
             view.Transform = isIn ? minTransform : maxTransform;
             UIView.Animate(duration, 0, UIViewAnimationOptions.CurveEaseInOut,
                 () =>
                 {
-                    view.Alpha = isIn ? AnimationConstants.MaxAlpha : AnimationConstants.MinAlpha;
+                    view.Alpha = isIn ? (nfloat)AnimationConstants.MaxAlpha : (nfloat)AnimationConstants.MinAlpha;
                     view.Transform = isIn ? maxTransform : minTransform;
                 },
                 onFinished

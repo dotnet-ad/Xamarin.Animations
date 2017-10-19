@@ -6,14 +6,6 @@ namespace Xamarin.Animations.iOS
 {
     using System;
 
-    #if __ANDROID__
-    using PlatformFloat = System.Double;
-        
-    
-#elif __UNIFIED__
-    using PlatformFloat = System.nfloat;
-    #endif
-
     public static class AnimationConstants
     {
         /// <summary>
@@ -24,18 +16,38 @@ namespace Xamarin.Animations.iOS
         /// <summary>
         /// The m34 for flip animations matrix.
         /// </summary>
-        public static PlatformFloat M34 = (PlatformFloat)(-1 * 0.001);
+        public const double M34 = (-1 * 0.001);
 
         /// <summary>
         /// The minimum alpha.
         /// </summary>
-        public static PlatformFloat MinAlpha = (PlatformFloat)0.0f;
+        public const double MinAlpha = 0.0f;
 
         /// <summary>
         /// The maximum alpha.
         /// </summary>
-        public static PlatformFloat MaxAlpha = (PlatformFloat)1.0f;
-  
+        public const double MaxAlpha = 1.0f;
+
+        /// <summary>
+        /// Minimum scale.
+        /// </summary>
+        public const double MinScale = 0.1f;
+
+        /// <summary>
+        /// Maximum zoom scale.
+        /// </summary>
+        public const double MaxScale = 0.1f;
+
+        /// <summary>
+        /// Minimum zoom scale.
+        /// </summary>
+        public const double MinZoom = 2.0f;
+
+        /// <summary>
+        /// Maximum scale.
+        /// </summary>
+        public const double MaxZoom = 1.0f;
+
         /// <summary>
         /// The starting angle for rotation animation.
         /// </summary>

@@ -17,7 +17,13 @@
         /// <param name="onFinished">On finished.</param>
         public static void Fade(this View view, AnimationTransition transition, double duration = AnimationConstants.DefaultDuration, Action onFinished = null)
         {
-            throw new  System.NotImplementedException();
+            var isIn = transition == AnimationTransition.In;
+
+            view.Alpha = (float) (isIn ? AnimationConstants.MinAlpha : AnimationConstants.MaxAlpha);
+
+            view.Animate()
+                .SetDuration((int)(duration * 1000))
+                .Alpha((float)(isIn ? AnimationConstants.MaxAlpha : AnimationConstants.MinAlpha));
         }
 
         /// <summary>
@@ -30,7 +36,7 @@
         /// <param name="onFinished">On finished.</param>
         public static void Flip(this View view, AnimationTransition transition, AnimationDirection direction, double duration = AnimationConstants.DefaultDuration, Action onFinished = null)
         {
-            throw new  System.NotImplementedException();
+            throw new System.NotImplementedException();
         }
 
         /// <summary>
@@ -43,7 +49,17 @@
         /// <param name="onFinished">On finished.</param>
         public static void Rotate(this View view, AnimationTransition transition, AnimationDirection direction, double duration = AnimationConstants.DefaultDuration, Action onFinished = null)
         {
-            throw new  System.NotImplementedException();
+            var isIn = transition == AnimationTransition.In;
+
+            var minAngle = (float)((direction == AnimationDirection.Right ? -1 : 1) * AnimationConstants.RotationAngle);
+            var maxAngle = 0.0f;
+
+            view.Alpha = (float)(isIn ? AnimationConstants.MinAlpha : AnimationConstants.MaxAlpha);
+            view.Rotation = isIn ? minAngle : maxAngle;
+
+            view.Animate()
+                .SetDuration((int)(duration * 1000))
+                .Rotation(isIn ? maxAngle : minAngle);
         }
 
         /// <summary>
@@ -55,7 +71,15 @@
         /// <param name="onFinished">On finished.</param>
         public static void Scale(this View view, AnimationTransition transition, double duration = AnimationConstants.DefaultDuration, Action onFinished = null)
         {
-            throw new  System.NotImplementedException();
+            var isIn = transition == AnimationTransition.In;
+
+            view.ScaleX = (float)(isIn ? AnimationConstants.MinScale : AnimationConstants.MaxScale);
+            view.ScaleY = (float)(isIn ? AnimationConstants.MinScale : AnimationConstants.MaxScale);
+
+            view.Animate()
+                .SetDuration((int)(duration * 1000))
+                .ScaleX((float)(isIn ? AnimationConstants.MaxScale : AnimationConstants.MinScale))
+                .ScaleY((float)(isIn ? AnimationConstants.MinScale : AnimationConstants.MaxScale));
         }
 
         /// <summary>
@@ -68,7 +92,25 @@
         /// <param name="onFinished">On finished.</param>
         public static void Slide(this View view, AnimationTransition transition, AnimationDirection direction, double duration = AnimationConstants.DefaultDuration, Action onFinished = null)
         {
-            throw new  System.NotImplementedException();
+            var isIn = transition == AnimationTransition.In;
+            var isLtr = (transition == AnimationTransition.In && (direction == AnimationDirection.Down || direction == AnimationDirection.Left)) || (transition == AnimationTransition.Out && (direction == AnimationDirection.Up || direction == AnimationDirection.Right));
+            var isVertical = direction == AnimationDirection.Up || direction == AnimationDirection.Down;
+            var isHorizontal = direction == AnimationDirection.Left || direction == AnimationDirection.Right;
+
+            var minTransformX = (isHorizontal ? (isLtr ? 1 : -1) : 0) * view.Width;
+            var minTransformY = (isVertical ? (isLtr ? 1 : -1) : 0) * view.Height;
+            var maxTransformX = 0;
+            var maxTransformY = 0;
+
+            view.Alpha = (float)(isIn ? AnimationConstants.MinAlpha : AnimationConstants.MaxAlpha);
+            view.TranslationX = isIn ? minTransformX : maxTransformX;
+            view.TranslationY = isIn ? minTransformY : maxTransformY;
+
+             view.Animate()
+                .SetDuration((int)(duration * 1000))
+                .Alpha((float)(isIn ? AnimationConstants.MaxAlpha : AnimationConstants.MinAlpha))
+                .TranslationX(isIn ? maxTransformX : minTransformX)
+                .TranslationY(isIn ? maxTransformY : minTransformY);
         }
 
         /// <summary>
@@ -80,7 +122,17 @@
         /// <param name="onFinished">On finished.</param>
         public static void Zoom(this View view, AnimationTransition transition, double duration = AnimationConstants.DefaultDuration, Action onFinished = null)
         {
-            throw new  System.NotImplementedException();
+            var isIn = transition == AnimationTransition.In;
+
+            view.Alpha = (float)(isIn ? AnimationConstants.MinAlpha : AnimationConstants.MaxAlpha);
+            view.ScaleX = (float)(isIn ? AnimationConstants.MinZoom : AnimationConstants.MaxZoom);
+            view.ScaleY = (float)(isIn ? AnimationConstants.MinZoom : AnimationConstants.MaxZoom);
+
+            view.Animate()
+                .SetDuration((int)(duration * 1000))
+                .Alpha((float)(isIn ? AnimationConstants.MaxAlpha : AnimationConstants.MinAlpha))
+                .ScaleX((float)(isIn ? AnimationConstants.MaxZoom : AnimationConstants.MinZoom))
+                .ScaleY((float)(isIn ? AnimationConstants.MinZoom : AnimationConstants.MaxZoom));
         }
     }
-
+}
