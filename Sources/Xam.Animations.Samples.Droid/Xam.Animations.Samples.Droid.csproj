@@ -74,13 +74,13 @@
     <Folder Include="Resources\drawable\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Xam.Animations.iOS\Xam.Animations.Droid\Xam.Animations.Droid.csproj">
-      <Project>{5715ABFF-69CB-4ED1-A5FC-B1F613988EF8}</Project>
-      <Name>Xam.Animations.Droid</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Xam.Animations.Samples.ViewModels\Xam.Animations.Samples.ViewModels.csproj">
       <Project>{85ACB3B4-B487-452C-B315-A58B6D670384}</Project>
       <Name>Xam.Animations.Samples.ViewModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Xam.Animations.Droid\Xam.Animations.Droid.csproj">
+      <Project>{5715ABFF-69CB-4ED1-A5FC-B1F613988EF8}</Project>
+      <Name>Xam.Animations.Droid</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

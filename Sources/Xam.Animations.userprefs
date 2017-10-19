@@ -1,35 +1,35 @@
-﻿<Properties StartupConfiguration="{EA8776F4-E1B7-4B90-91A4-94858E4AFF3D}|Default">
-  <MonoDevelop.Ide.ItemProperties.Platforms.Xam.Animations.Droid PreferredExecutionTarget="Android.Android_ARMv7a" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Xam.Animations.Samples.macOS/ViewController.cs">
+﻿<Properties StartupConfiguration="{9C3A6297-0615-40D3-8ACB-919B96001ACC}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Xam.Animations.Droid/AnimationExtensions.cs">
     <Files>
       <File FileName="Xam.Animations.Shared/Transform.cs" Line="10" Column="34" />
       <File FileName="Xam.Animations.Shared/IAnimation.cs" Line="1" Column="25" />
       <File FileName="Xam.Animations.Shared/Curve.cs" Line="9" Column="1" />
       <File FileName="Xam.Animations.Shared/AnimationSequence.cs" Line="1" Column="25" />
       <File FileName="Xam.Animations.Shared/Animations.cs" Line="156" Column="1" />
-      <File FileName="Xam.Animations.iOS/Xam.Animations.Droid/AnimationExtensions.cs" Line="36" Column="46" />
       <File FileName="Xam.Animations.Samples.iOS/AppDelegate.cs" Line="1" Column="1" />
-      <File FileName="Xam.Animations.Samples.iOS/ViewController.cs" Line="64" Column="1" />
-      <File FileName="Xam.Animations.iOS/AnimationExtensions.cs" Line="48" Column="38" />
+      <File FileName="Xam.Animations.Samples.iOS/ViewController.cs" Line="14" Column="10" />
       <File FileName="Xam.Animations.Shared/TransformAnimation.cs" Line="21" Column="1" />
-      <File FileName="Xam.Animations.iOS/Xam.Animations.Droid/RelayInterpolator.cs" Line="1" Column="1" />
-      <File FileName="Xam.Animations.Samples.Droid/MainActivity.cs" Line="1" Column="1" />
+      <File FileName="Xam.Animations.Samples.Droid/MainActivity.cs" Line="17" Column="50" />
       <File FileName="Xam.Animations.Samples.ViewModels/HomeViewModel.cs" Line="4" Column="38" />
       <File FileName="Xam.Animations.Samples.iOS/Main.cs" Line="12" Column="1" />
-      <File FileName="Xam.Animations.macOS/AnimationExtensions.cs" Line="49" Column="40" />
+      <File FileName="Xam.Animations.macOS/AnimationExtensions.cs" Line="54" Column="13" />
       <File FileName="Xam.Animations.Samples.macOS/AppDelegate.cs" Line="1" Column="1" />
-      <File FileName="Xam.Animations.Samples.macOS/ViewController.cs" Line="1" Column="1" />
+      <File FileName="Xam.Animations.Samples.macOS/ViewController.cs" Line="49" Column="10" />
+      <File FileName="Xam.Animations.Droid/AnimationExtensions.cs" Line="39" Column="76" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Xam.Animations" expanded="True">
-            <Node name="Platforms" expanded="True" />
-            <Node name="Samples" expanded="True">
-              <Node name="Xam.Animations.Samples.macOS" expanded="True">
+            <Node name="Platforms" expanded="True">
+              <Node name="Xam.Animations.Droid" expanded="True">
                 <Node name="References" selected="True" />
               </Node>
-              <Node name="Xam.Animations.Samples.ViewModels" expanded="True" />
+            </Node>
+            <Node name="Samples" expanded="True">
+              <Node name="Xam.Animations.Samples.Droid" expanded="True">
+                <Node name="References" expanded="True" />
+              </Node>
             </Node>
           </Node>
         </State>
@@ -44,5 +44,6 @@
   <MonoDevelop.Ide.ItemProperties.Samples.Xam.Animations.Samples.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.81549F2C-8D14-4CEC-80A9-8BFF9D8B7C97">
     <MonoDevelop.MacDev.AppleDevelopmentTeam />
   </MonoDevelop.Ide.ItemProperties.Samples.Xam.Animations.Samples.iOS>
+  <MonoDevelop.Ide.ItemProperties.Samples.Xam.Animations.Samples.macOS PreferredExecutionTarget="Test1" />
   <MultiItemStartupConfigurations />
 </Properties>

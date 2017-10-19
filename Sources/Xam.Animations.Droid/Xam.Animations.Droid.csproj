@@ -53,6 +53,6 @@
   <ItemGroup>
     <AndroidResource Include="Resources\values\Strings.xml" />
   </ItemGroup>
-  <Import Project="..\..\Xam.Animations.Shared\Xam.Animations.Shared.projitems" Label="Shared" Condition="Exists('..\..\Xam.Animations.Shared\Xam.Animations.Shared.projitems')" />
+  <Import Project="..\Xam.Animations.Shared\Xam.Animations.Shared.projitems" Label="Shared" Condition="Exists('..\Xam.Animations.Shared\Xam.Animations.Shared.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

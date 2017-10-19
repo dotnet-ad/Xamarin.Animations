@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+   <metadata minClientVersion="2.8.1">
+        <id>Xam.Animations</id>
+        <version>$version$</version>
+        <title>Animations helpers for Xamarin</title>
+        <authors>Aloïs DENIEL</authors>
+        <owners>Aloïs DENIEL</owners>
+        <licenseUrl>https://github.com/aloisdeniel/Microcharts/blob/master/LICENSE</licenseUrl>
+        <projectUrl>https://github.com/aloisdeniel/Microcharts/</projectUrl>
+        <iconUrl>https://raw.githubusercontent.com/aloisdeniel/Microcharts/master/Documentation/Logo.png</iconUrl>
+     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+       <description>Animate your views with simple shareable animation declarations.</description>
+       <summary>Animate your views with simple shareable animation declarations.</summary>
+       <tags>xamarin, xamarin.android, xamarin.ios, xamarin.mac, ios, android, macos, mac, uwp, windows, animation, animate</tags> 
+   </metadata>
+   <files>
+
+     <!-- Standard -->
+     <file src="..\Sources\Xam.Animations\bin\Release\netstandard1.0\Xam.Animations.dll" target="lib\netstandard1.0" />
+
+     <!--Xamarin.iOS-->
+     <file src="..\Sources\Xam.Animations.iOS\bin\Release\Xam.Animations.dll" target="lib\Xamarin.iOS10" />
+
+     <!--Xamarin.macOS-->
+     <file src="..\Sources\Xam.Animations.macOS\bin\Release\Xam.Animations.dll" target="lib\xamarinmac" />
+
+     <!--Xamarin.Android-->
+     <file src="..\Sources\Xam.Animations.Droid\bin\Release\Xam.Animations.dll" target="lib\MonoAndroid10" />
+   </files>
+</package>
