@@ -41,3 +41,5 @@ foreach ($v in $versions)
 {
     Install-AndroidSDK $v
 }
+
+exit

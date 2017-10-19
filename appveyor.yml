@@ -8,7 +8,7 @@ assembly_info:
   assembly_file_version: '{version}'
   assembly_informational_version: '{version}'
 install: 
-  - powershell .\Build\androidsdk-install 25
+  - powershell .\Build\androidsdk-install.ps1 -versions 25
 build_script:
 - cmd: >-
 
