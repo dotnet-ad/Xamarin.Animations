@@ -1,5 +1,7 @@
-$AndroidToolPath = "${env:ProgramFiles(x86)}\Android\android-sdk\tools\android"
-#$AndroidToolPath = "$env:localappdata\Android\android-sdk\tools\android"
+param (
+    [string]$AndroidToolPath = "${env:ProgramFiles(x86)}\Android\android-sdk\tools\android", #$AndroidToolPath = "$env:localappdata\Android\android-sdk\tools\android"
+    [Parameter(Mandatory=$true)][string[]]$versions
+ )
 
 Function Get-AllAndroidSDKs() {
     $output = & $AndroidToolPath list sdk --all
@@ -33,4 +35,9 @@ Function Install-AndroidSDK
 
     $sdks = Get-AllAndroidSDKs |? { $_.name -like "sdk platform*API $Level*" -or $_.name -like "google apis*api $Level" }
     Execute-AndroidSDKInstall -sdks $sdks
+}
+
+foreach ($v in $versions)
+{
+    Install-AndroidSDK $v
 }
