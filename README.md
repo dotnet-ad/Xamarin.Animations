@@ -14,7 +14,7 @@ To install Xamarin.Animations, run the following command in the Package Manager 
 
 ## Usage
 
-The animations are a set of extensions for `UIView`*(iOS)* and `View`*(Android)*.
+The animations are a set of extensions for `UIView`*(iOS)* and `View`*(Android)* and `UIElement`*(Windows)*.
 
 The extension methods can take these parameters :
 
