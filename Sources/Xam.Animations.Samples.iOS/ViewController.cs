@@ -32,7 +32,7 @@ namespace Xam.Animations.Samples.iOS
             this.View.AddSubview(view);
 
             // Button
-            this.button = new UIButton(UIButtonType.Plain)
+            this.button = new UIButton()
             {
                 Frame = new CGRect(50, 200, 300, 100),
             };
