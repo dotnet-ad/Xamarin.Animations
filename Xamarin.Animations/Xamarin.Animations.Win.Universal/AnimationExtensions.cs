@@ -21,6 +21,7 @@ namespace Xamarin.Animations.Win.Universal
         public static void Fade(this UIElement view, AnimationTransition transition, double duration = AnimationConstants.DefaultDuration, Action onFinished = null)
         {
             view.RenderTransform = null;
+            view.Projection = null;
 
             CreateStoryboard(view, duration, transition).Begin();
         }
@@ -72,6 +73,7 @@ namespace Xamarin.Animations.Win.Universal
         public static void Rotate(this UIElement view, AnimationTransition transition, AnimationDirection direction, double duration = AnimationConstants.DefaultDuration, Action onFinished = null)
         {
             var transform = new RotateTransform();
+            view.Projection = null;
             view.RenderTransform = transform;
             view.RenderTransformOrigin = new Windows.Foundation.Point(0.5, 0.5);
 
@@ -90,6 +92,7 @@ namespace Xamarin.Animations.Win.Universal
         public static void Scale(this UIElement view, AnimationTransition transition, double duration = AnimationConstants.DefaultDuration, Action onFinished = null)
         {
             var transform = new ScaleTransform();
+            view.Projection = null;
             view.RenderTransform = transform;
             view.RenderTransformOrigin = new Windows.Foundation.Point(0.5, 0.5);
 
@@ -121,6 +124,7 @@ namespace Xamarin.Animations.Win.Universal
             var maxTransformY = 0;
 
             var transform = new TranslateTransform();
+            view.Projection = null;
             view.RenderTransform = transform;
             view.RenderTransformOrigin = new Windows.Foundation.Point(0.5, 0.5);
 
@@ -141,6 +145,7 @@ namespace Xamarin.Animations.Win.Universal
         public static void Zoom(this UIElement view, AnimationTransition transition, double duration = AnimationConstants.DefaultDuration, Action onFinished = null)
         {
             var transform = new ScaleTransform();
+            view.Projection = null;
             view.RenderTransform = transform;
             view.RenderTransformOrigin = new Windows.Foundation.Point(0.5, 0.5);
 

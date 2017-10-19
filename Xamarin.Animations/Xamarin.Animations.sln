@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.Animations.Win.Univ
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.Animations.Win.Universal.Sample", "Samples\Xamarin.Animations.Win.Universal.Sample\Xamarin.Animations.Win.Universal.Sample.csproj", "{C512C723-0E23-4D3B-92CF-AB930BB2E10E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.Animations.Win.Universal.Sample.Phone", "Samples\Xamarin.Animations.Win.Universal.Sample.Phone\Xamarin.Animations.Win.Universal.Sample.Phone.csproj", "{99A1A262-9FDF-43FD-AF22-965FBB54E7E3}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Xamarin.Animations.Shared\Xamarin.Animations.Shared.projitems*{32c9fd9a-72f9-4cca-8190-8ca001cdff27}*SharedItemsImports = 4
@@ -331,6 +333,66 @@ Global
 		{C512C723-0E23-4D3B-92CF-AB930BB2E10E}.Release|x86.ActiveCfg = Release|x86
 		{C512C723-0E23-4D3B-92CF-AB930BB2E10E}.Release|x86.Build.0 = Release|x86
 		{C512C723-0E23-4D3B-92CF-AB930BB2E10E}.Release|x86.Deploy.0 = Release|x86
+		{99A1A262-9FDF-43FD-AF22-965FBB54E7E3}.Ad-Hoc|Any CPU.ActiveCfg = Release|Any CPU
+		{99A1A262-9FDF-43FD-AF22-965FBB54E7E3}.Ad-Hoc|Any CPU.Build.0 = Release|Any CPU
+		{99A1A262-9FDF-43FD-AF22-965FBB54E7E3}.Ad-Hoc|Any CPU.Deploy.0 = Release|Any CPU
+		{99A1A262-9FDF-43FD-AF22-965FBB54E7E3}.Ad-Hoc|ARM.ActiveCfg = Release|ARM
+		{99A1A262-9FDF-43FD-AF22-965FBB54E7E3}.Ad-Hoc|ARM.Build.0 = Release|ARM
+		{99A1A262-9FDF-43FD-AF22-965FBB54E7E3}.Ad-Hoc|ARM.Deploy.0 = Release|ARM
+		{99A1A262-9FDF-43FD-AF22-965FBB54E7E3}.Ad-Hoc|iPhone.ActiveCfg = Release|Any CPU
+		{99A1A262-9FDF-43FD-AF22-965FBB54E7E3}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{99A1A262-9FDF-43FD-AF22-965FBB54E7E3}.Ad-Hoc|Mixed Platforms.ActiveCfg = Release|x86
+		{99A1A262-9FDF-43FD-AF22-965FBB54E7E3}.Ad-Hoc|Mixed Platforms.Build.0 = Release|x86
+		{99A1A262-9FDF-43FD-AF22-965FBB54E7E3}.Ad-Hoc|Mixed Platforms.Deploy.0 = Release|x86
+		{99A1A262-9FDF-43FD-AF22-965FBB54E7E3}.Ad-Hoc|x64.ActiveCfg = Release|Any CPU
+		{99A1A262-9FDF-43FD-AF22-965FBB54E7E3}.Ad-Hoc|x86.ActiveCfg = Release|x86
+		{99A1A262-9FDF-43FD-AF22-965FBB54E7E3}.Ad-Hoc|x86.Build.0 = Release|x86
+		{99A1A262-9FDF-43FD-AF22-965FBB54E7E3}.Ad-Hoc|x86.Deploy.0 = Release|x86
+		{99A1A262-9FDF-43FD-AF22-965FBB54E7E3}.AppStore|Any CPU.ActiveCfg = Release|Any CPU
+		{99A1A262-9FDF-43FD-AF22-965FBB54E7E3}.AppStore|Any CPU.Build.0 = Release|Any CPU
+		{99A1A262-9FDF-43FD-AF22-965FBB54E7E3}.AppStore|Any CPU.Deploy.0 = Release|Any CPU
+		{99A1A262-9FDF-43FD-AF22-965FBB54E7E3}.AppStore|ARM.ActiveCfg = Release|ARM
+		{99A1A262-9FDF-43FD-AF22-965FBB54E7E3}.AppStore|ARM.Build.0 = Release|ARM
+		{99A1A262-9FDF-43FD-AF22-965FBB54E7E3}.AppStore|ARM.Deploy.0 = Release|ARM
+		{99A1A262-9FDF-43FD-AF22-965FBB54E7E3}.AppStore|iPhone.ActiveCfg = Release|Any CPU
+		{99A1A262-9FDF-43FD-AF22-965FBB54E7E3}.AppStore|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{99A1A262-9FDF-43FD-AF22-965FBB54E7E3}.AppStore|Mixed Platforms.ActiveCfg = Release|x86
+		{99A1A262-9FDF-43FD-AF22-965FBB54E7E3}.AppStore|Mixed Platforms.Build.0 = Release|x86
+		{99A1A262-9FDF-43FD-AF22-965FBB54E7E3}.AppStore|Mixed Platforms.Deploy.0 = Release|x86
+		{99A1A262-9FDF-43FD-AF22-965FBB54E7E3}.AppStore|x64.ActiveCfg = Release|Any CPU
+		{99A1A262-9FDF-43FD-AF22-965FBB54E7E3}.AppStore|x86.ActiveCfg = Release|x86
+		{99A1A262-9FDF-43FD-AF22-965FBB54E7E3}.AppStore|x86.Build.0 = Release|x86
+		{99A1A262-9FDF-43FD-AF22-965FBB54E7E3}.AppStore|x86.Deploy.0 = Release|x86
+		{99A1A262-9FDF-43FD-AF22-965FBB54E7E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99A1A262-9FDF-43FD-AF22-965FBB54E7E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99A1A262-9FDF-43FD-AF22-965FBB54E7E3}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{99A1A262-9FDF-43FD-AF22-965FBB54E7E3}.Debug|ARM.ActiveCfg = Debug|ARM
+		{99A1A262-9FDF-43FD-AF22-965FBB54E7E3}.Debug|ARM.Build.0 = Debug|ARM
+		{99A1A262-9FDF-43FD-AF22-965FBB54E7E3}.Debug|ARM.Deploy.0 = Debug|ARM
+		{99A1A262-9FDF-43FD-AF22-965FBB54E7E3}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{99A1A262-9FDF-43FD-AF22-965FBB54E7E3}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{99A1A262-9FDF-43FD-AF22-965FBB54E7E3}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{99A1A262-9FDF-43FD-AF22-965FBB54E7E3}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{99A1A262-9FDF-43FD-AF22-965FBB54E7E3}.Debug|Mixed Platforms.Deploy.0 = Debug|x86
+		{99A1A262-9FDF-43FD-AF22-965FBB54E7E3}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{99A1A262-9FDF-43FD-AF22-965FBB54E7E3}.Debug|x86.ActiveCfg = Debug|x86
+		{99A1A262-9FDF-43FD-AF22-965FBB54E7E3}.Debug|x86.Build.0 = Debug|x86
+		{99A1A262-9FDF-43FD-AF22-965FBB54E7E3}.Debug|x86.Deploy.0 = Debug|x86
+		{99A1A262-9FDF-43FD-AF22-965FBB54E7E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99A1A262-9FDF-43FD-AF22-965FBB54E7E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99A1A262-9FDF-43FD-AF22-965FBB54E7E3}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{99A1A262-9FDF-43FD-AF22-965FBB54E7E3}.Release|ARM.ActiveCfg = Release|ARM
+		{99A1A262-9FDF-43FD-AF22-965FBB54E7E3}.Release|ARM.Build.0 = Release|ARM
+		{99A1A262-9FDF-43FD-AF22-965FBB54E7E3}.Release|ARM.Deploy.0 = Release|ARM
+		{99A1A262-9FDF-43FD-AF22-965FBB54E7E3}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{99A1A262-9FDF-43FD-AF22-965FBB54E7E3}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{99A1A262-9FDF-43FD-AF22-965FBB54E7E3}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{99A1A262-9FDF-43FD-AF22-965FBB54E7E3}.Release|Mixed Platforms.Build.0 = Release|x86
+		{99A1A262-9FDF-43FD-AF22-965FBB54E7E3}.Release|Mixed Platforms.Deploy.0 = Release|x86
+		{99A1A262-9FDF-43FD-AF22-965FBB54E7E3}.Release|x64.ActiveCfg = Release|Any CPU
+		{99A1A262-9FDF-43FD-AF22-965FBB54E7E3}.Release|x86.ActiveCfg = Release|x86
+		{99A1A262-9FDF-43FD-AF22-965FBB54E7E3}.Release|x86.Build.0 = Release|x86
+		{99A1A262-9FDF-43FD-AF22-965FBB54E7E3}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -339,5 +401,6 @@ Global
 		{5C203298-574A-4030-ADF2-3205A78C3A2C} = {43B7D39E-9CD6-4B6B-A3D7-17A27BBEE08B}
 		{D5E89B5F-E78A-43E1-A7D4-2DEDE3FFB9F9} = {43B7D39E-9CD6-4B6B-A3D7-17A27BBEE08B}
 		{C512C723-0E23-4D3B-92CF-AB930BB2E10E} = {43B7D39E-9CD6-4B6B-A3D7-17A27BBEE08B}
+		{99A1A262-9FDF-43FD-AF22-965FBB54E7E3} = {43B7D39E-9CD6-4B6B-A3D7-17A27BBEE08B}
 	EndGlobalSection
 EndGlobal
