@@ -15,7 +15,8 @@ install:
   - echo y | "C:\Program Files (x86)\Android\android-sdk\tools\android.bat" update sdk -u -a -t android-15
 build_script:
 - cmd: >-
-    powershell .\Build\build.ps1 -Target Default -Verbosity diagnostic
+  cd .\Build
+  powershell .\build.ps1 -Target Default -Verbosity diagnostic
 artifacts:
 - path: ./Build/nuget/*.nupkg
   name: NuGet
