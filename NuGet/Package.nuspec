@@ -6,9 +6,9 @@
         <title>Animations helpers for Xamarin</title>
         <authors>Aloïs DENIEL</authors>
         <owners>Aloïs DENIEL</owners>
-        <licenseUrl>https://github.com/aloisdeniel/Microcharts/blob/master/LICENSE</licenseUrl>
-        <projectUrl>https://github.com/aloisdeniel/Microcharts/</projectUrl>
-        <iconUrl>https://raw.githubusercontent.com/aloisdeniel/Microcharts/master/Documentation/Logo.png</iconUrl>
+        <licenseUrl>https://github.com/aloisdeniel/Xamarin.Animations/blob/master/LICENSE</licenseUrl>
+        <projectUrl>https://github.com/aloisdeniel/Xamarin.Animations/</projectUrl>
+        <iconUrl>https://raw.githubusercontent.com/aloisdeniel/Xamarin.Animations/master/Documentation/logo.png</iconUrl>
      <requireLicenseAcceptance>false</requireLicenseAcceptance>
        <description>Animate your views with simple shareable animation declarations.</description>
        <summary>Animate your views with simple shareable animation declarations.</summary>

@@ -51,9 +51,16 @@
                 {
                     CenterX = w / 2,
                     CenterY = h / 2,
+                    ScaleX = transformAnimation.From.ScaleX,
+                    ScaleY = transformAnimation.From.ScaleY,
+                    TranslateX = transformAnimation.From.TranslateX,
+                    TranslateY = transformAnimation.From.TranslateY,
+                    Rotation = transformAnimation.From.Rotation,
                 };
-                view.RenderTransform = transform;
 
+                view.Opacity = transformAnimation.From.Opacity;
+                view.RenderTransform = transform;
+                
                 var sb = new Storyboard()
                 {
                     BeginTime = transformAnimation.Delay,

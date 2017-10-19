@@ -33,7 +33,7 @@ Task ("Push")
 	.IsDependentOn ("Pack")
 	.Does (() =>
 {
-	var packages = GetFiles(NUPKGFOLDER + "*.nupkg");
+	var packages = GetFiles(NUPKGFOLDER + "*."+VERSION+".nupkg");
 	NuGetPush(packages, new NuGetPushSettings {
 		Source = "https://www.nuget.org/api/v2/package",
 		ApiKey = NUGET_APIKEY
