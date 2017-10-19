@@ -1,0 +1,8 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.0</TargetFramework>
+  </PropertyGroup>
+
+  <Import Project="..\Xam.Animations.Shared\Xam.Animations.Shared.projitems" Label="Shared" Condition="Exists('..\Xam.Animations.Shared\Xam.Animations.Shared.projitems')" />
+</Project>

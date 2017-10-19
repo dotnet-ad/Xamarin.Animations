@@ -1,8 +1,8 @@
-![](logo.png)
+![](Documentation/logo.png)
 
-Those libraries tends to make view animation easier for common scenarios like fade or scale entrance animations.
+This cross-platform library tends to make view animation shareable and easier for common scenarios like fade or scale entrance animations.
 
-![](screen.gif)
+![](Documentation/screen.gif)
 
 ## Installation
 
@@ -10,41 +10,32 @@ The library **will** be available soon on [NuGet](https://www.nuget.org/packages
 
 To install Xamarin.Animations, run the following command in the Package Manager Console.
 
-	PM> Install-Package Xamarin.Animations
+	PM> Install-Package Xam.Animations
 
 ## Usage
 
-The animations are a set of extensions for `UIView`*(iOS)* and `View`*(Android)* and `UIElement`*(Windows)*.
+The package adds an `AnimateAsync()` extension method to `UIView`*(iOS)* and `View`*(Android)* and `UIElement`*(Windows)*.
 
-The extension methods can take these parameters :
+To start an animation with an 'IAnimation'.
 
-* `AnimationDirection` `direction` : indicates the direction for the animation. If you choose `Left` it will generally move from **right to left**.
-* `AnimationTransition` `transition` : indicates wether it is an entrance or an exit animation.
-* `double` `duration` : the duration of the animation in seconds *(optional - default 0.3s)*
-* `Action` `onFinished` : a completion handler *(optional)*
-
-
-To start an animation, simply call one of the extensions on your view.
-
-	view.Fade(AnimationTransition.In);
-	
-	view.Zoom(AnimationTransition.In, 0.5);
-	
-	view.Scale(AnimationTransition.Out, 0.2, () => { /* ... */ });
-	
-	view.Flip(AnimationTransition.In, AnimationDirection.Left);
-	
-	view.Slide(AnimationTransition.Out, AnimationDirection.Down, 0.4);
-	
-	view.Rotate(AnimationTransition.Out, AnimationDirection.Left, 0.2, () => { /* ... */ });
+```csharp
+await view.AnimateAsync(Animations.FadeIn());
+await view.AnimateAsync(Animations.FadeIn(duration: TimeSpan.FromSeconds(0.5f)));
+await view.AnimateAsync(Animations.FadeIn(duration: TimeSpan.FromSeconds(0.5f), delay: TimeSpan.FromSeconds(0.2f)));
+```
 
 ## Roadmap / ideas
 
-* Adding a *strength* parameter
-* Adding a *curve* parameter
+* Adding UWP support
 * Adding Mac support
 * Adding WPF support
 
-## Copyright and license
+## Contributions
 
-Code and documentation copyright 2014-2015 Aloïs Deniel released under the MIT license.
+Contributions are welcome! If you find a bug please report it and if you want a feature please report it.
+
+If you want to contribute code please file an issue and create a branch off of the current dev branch and file a pull request.
+
+## License
+
+MIT © [Aloïs Deniel](http://aloisdeniel.github.io)
