@@ -1,5 +1,7 @@
 ![](Documentation/logo.png)
 
+[![Build status](https://ci.appveyor.com/api/projects/status/8mtnmwdd4cxksy2m?svg=true)](https://ci.appveyor.com/project/aloisdeniel/xamarin-animations)
+
 This cross-platform library tends to make view animation shareable and easier for common scenarios like fade or scale entrance animations.
 
 ![](Documentation/screen.gif)
