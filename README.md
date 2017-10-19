@@ -27,7 +27,6 @@ await view.AnimateAsync(Animations.FadeIn(duration: TimeSpan.FromSeconds(0.5f), 
 ## Roadmap / ideas
 
 * Adding UWP support
-* Adding Mac support
 * Adding WPF support
 
 ## Contributions

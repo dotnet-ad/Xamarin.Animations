@@ -1,9 +1,9 @@
-﻿using Foundation;
-namespace Xam.Animations
+﻿namespace Xam.Animations
 {
     using System;
     using System.Threading.Tasks;
     using CoreGraphics;
+    using Foundation;
     using AppKit;
     using CoreAnimation;
 
@@ -35,15 +35,15 @@ namespace Xam.Animations
             }
         }
 
-        internal static NSView AddAnimation(this NSView view, string name, Curve curve, float from, float to, Action<CABasicAnimation> init = null)
+        internal static CALayer AddAnimation(this CALayer layer, string name, CAMediaTimingFunction curve, float from, float to, Action<CABasicAnimation> init = null)
         {
             var basic = CABasicAnimation.FromKeyPath(name);
-            basic.TimingFunction = curve.ToNative();
+            basic.TimingFunction = curve;
             basic.From = new NSNumber(from);
             basic.To = new NSNumber(to);
             init?.Invoke(basic);
-            view.Layer.AddAnimation(basic, name);
-            return view;
+            layer.AddAnimation(basic, name);
+            return layer;
         }
 
         public static async Task AnimateAsync(this NSView view, IAnimation animation)
@@ -58,18 +58,18 @@ namespace Xam.Animations
 
                 var source = new TaskCompletionSource<bool>();
 
-                var curve = transformAnimation.Curve;
+                var curve = transformAnimation.Curve.ToNative();
                 var from = transformAnimation.From;
                 var to = transformAnimation.To;
                 var w = (float)view.Bounds.Width;
                 var h = (float)view.Bounds.Height;
 
-                view.AddAnimation("opacity", curve, from.Opacity, to.Opacity, (anim) => anim.AnimationStopped += (sender, e) => source.SetResult(true))
-                    .AddAnimation("transform.scale.x", curve, from.ScaleX, to.ScaleX)
-                    .AddAnimation("transform.scale.y", curve, from.ScaleY,to.ScaleY)
-                    .AddAnimation("transform.translation.x", curve, from.TranslateX * w, to.TranslateX * w)
-                    .AddAnimation("transform.translation.y", curve, -1 * from.TranslateY * h, -1 * to.TranslateY * h)
-                    .AddAnimation("transform.rotation.z", curve, from.Rotation, to.Rotation);
+                view.Layer.AddAnimation("opacity", curve, from.Opacity, to.Opacity, (anim) => anim.AnimationStopped += (sender, e) => source.SetResult(true))
+                          .AddAnimation("transform.scale.x", curve, from.ScaleX, to.ScaleX)
+                          .AddAnimation("transform.scale.y", curve, from.ScaleY,to.ScaleY)
+                          .AddAnimation("transform.translation.x", curve, from.TranslateX * w, to.TranslateX * w)
+                          .AddAnimation("transform.translation.y", curve, -1 * from.TranslateY * h, -1 * to.TranslateY * h)
+                          .AddAnimation("transform.rotation.z", curve, from.Rotation, to.Rotation);
                 
                 view.Layer.Opacity = transformAnimation.To.Opacity;
                 view.Layer.Transform = transformAnimation.To.ToNative(view.Bounds.Size);
