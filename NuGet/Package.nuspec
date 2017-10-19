@@ -27,5 +27,8 @@
 
      <!--Xamarin.Android-->
      <file src="..\Sources\Xam.Animations.Droid\bin\Release\Xam.Animations.dll" target="lib\MonoAndroid10" />
+
+     <!--Xamarin.Uwp-->
+     <file src="..\Sources\Xam.Animations.Uwp\bin\Release\Xam.Animations.dll" target="lib\uap" />
    </files>
 </package>

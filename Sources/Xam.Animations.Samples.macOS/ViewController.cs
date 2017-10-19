@@ -60,18 +60,5 @@ namespace Xam.Animations.Samples.macOS
                     break;
             }
         }
-
-        public override NSObject RepresentedObject
-        {
-            get
-            {
-                return base.RepresentedObject;
-            }
-            set
-            {
-                base.RepresentedObject = value;
-                // Update the view, if already loaded.
-            }
-        }
     }
 }
