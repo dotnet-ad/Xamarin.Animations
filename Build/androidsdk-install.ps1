@@ -37,8 +37,11 @@ Function Install-AndroidSDK
     Execute-AndroidSDKInstall -sdks $sdks
 }
 
-Stop-Process -processname adb
+# Tools
+Echo 'y' | & $AndroidToolPath update sdk -u -a -t tools
+Echo 'y' | & $AndroidToolPath update sdk -u -a -t platform-tools
 
+# SDKs
 foreach ($v in $versions)
 {
     Install-AndroidSDK $v
