@@ -44,16 +44,7 @@
   <ItemGroup>
     <Compile Include="Animations\FlipAnimation.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
-    <Compile Include="..\Xamarin.Animations.iOS\AnimationDirection.cs">
-      <Link>AnimationDirection.cs</Link>
-    </Compile>
-    <Compile Include="..\Xamarin.Animations.iOS\AnimationTransition.cs">
-      <Link>AnimationTransition.cs</Link>
-    </Compile>
     <Compile Include="AnimationExtensions.cs" />
-    <Compile Include="..\Xamarin.Animations.iOS\AnimationConstants.cs">
-      <Link>AnimationConstants.cs</Link>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -61,5 +52,6 @@
   <ItemGroup>
     <AndroidResource Include="Resources\values\Strings.xml" />
   </ItemGroup>
+  <Import Project="..\Xamarin.Animations.Shared\Xamarin.Animations.Shared.projitems" Label="Shared" Condition="Exists('..\Xamarin.Animations.Shared\Xamarin.Animations.Shared.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
 </Project>
