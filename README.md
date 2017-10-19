@@ -2,6 +2,8 @@
 
 Those libraries tends to make view animation easier for common scenarios like fade or scale entrance animations.
 
+![](screen.gif)
+
 ## Installation
 
 The library **will** be available soon on [NuGet](https://www.nuget.org/packages/Xamarin.Animations/).
