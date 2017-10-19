@@ -37,6 +37,8 @@ Function Install-AndroidSDK
     Execute-AndroidSDKInstall -sdks $sdks
 }
 
+Stop-Process -processname adb
+
 foreach ($v in $versions)
 {
     Install-AndroidSDK $v
