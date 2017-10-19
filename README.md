@@ -40,7 +40,8 @@ To start an animation, simply call one of the extensions on your view.
 
 ## Roadmap / ideas
 
-* Adding WindowsPhone/Store support
+* Adding a *strength* parameter
+* Adding a *curve* parameter
 * Adding Mac support
 * Adding WPF support
 
