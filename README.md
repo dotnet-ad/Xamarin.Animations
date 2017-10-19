@@ -1,7 +1,7 @@
 ![](Documentation/logo.png)
 
 [![Build status](https://ci.appveyor.com/api/projects/status/8mtnmwdd4cxksy2m?svg=true)](https://ci.appveyor.com/project/aloisdeniel/xamarin-animations) 
-[![NuGet](https://img.shields.io/nuget/v/Xam.Animations.svg?label=NuGet)](https://www.nuget.org/packages/Xam.Animations/)
+[![NuGet](https://img.shields.io/nuget/v/Xam.Animations.svg?label=NuGet)](https://www.nuget.org/packages/Xam.Animations/) [![Donate](https://img.shields.io/badge/donate-paypal-yellow.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=ZJZKXPPGBKKAY&lc=US&item_name=GitHub&item_number=0000001&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted)
 
 This cross-platform library tends to make view animation shareable and easier for common scenarios like fade or scale entrance animations.
 
