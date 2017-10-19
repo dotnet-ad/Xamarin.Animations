@@ -1,14 +1,13 @@
 ![](Documentation/logo.png)
 
-[![Build status](https://ci.appveyor.com/api/projects/status/8mtnmwdd4cxksy2m?svg=true)](https://ci.appveyor.com/project/aloisdeniel/xamarin-animations)
+[![Build status](https://ci.appveyor.com/api/projects/status/8mtnmwdd4cxksy2m?svg=true)](https://ci.appveyor.com/project/aloisdeniel/xamarin-animations) 
+[![NuGet](https://img.shields.io/nuget/v/Xam.Animations.svg?label=NuGet)](https://www.nuget.org/packages/Xam.Animations/)
 
 This cross-platform library tends to make view animation shareable and easier for common scenarios like fade or scale entrance animations.
 
 ![](Documentation/screen.gif)
 
 ## Installation
-
-The library **will** be available soon on [NuGet](https://www.nuget.org/packages/Xamarin.Animations/).
 
 To install Xamarin.Animations, run the following command in the Package Manager Console.
 
