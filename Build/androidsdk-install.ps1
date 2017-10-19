@@ -26,7 +26,7 @@ Function Execute-AndroidSDKInstall() {
 
     $sdkIndexes = $sdks |% { $_.Index }
     $sdkIndexArgument = [string]::Join(',', $sdkIndexes)
-    Echo 'y' | & $AndroidToolPath update sdk -u -a -t $sdkIndexArgument
+    Echo 'y' | & $AndroidToolPath update sdk -u -a -t --force $sdkIndexArgument
 }
 
 Function Install-AndroidSDK

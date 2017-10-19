@@ -1,9 +1,10 @@
 var TARGET = Argument ("target", Argument ("t", "Default"));
-var VERSION = EnvironmentVariable ("APPVEYOR_BUILD_VERSION") ?? Argument("version", "0.0.9999");
+var VERSION = EnvironmentVariable ("APPVEYOR_BUILD_VERSION") ?? Argument("build_version", "0.0.9999");
 var CONFIG = Argument("configuration", EnvironmentVariable ("CONFIGURATION") ?? "Release");
 var SLN = "../Sources/Xam.Animations.sln";
-var NUSPEC = "../Xam.Package.nuspec";
-var NUPKGFOLDER = "./nuget";
+var NUSPEC = "../NuGet/Package.nuspec";
+var NUPKGFOLDER = "./nuget/";
+var NUGET_APIKEY = Argument ("nuget_apikey", "");
 
 Task("Build").Does(()=>
 {
@@ -25,6 +26,17 @@ Task ("Pack")
 		Version = VERSION,
 		OutputDirectory = NUPKGFOLDER,
 		BasePath = "./"
+	});
+});
+
+Task ("Push")
+	.IsDependentOn ("Pack")
+	.Does (() =>
+{
+	var packages = GetFiles(NUPKGFOLDER + "*.nupkg");
+	NuGetPush(packages, new NuGetPushSettings {
+		Source = "https://www.nuget.org/api/v2/package",
+		ApiKey = NUGET_APIKEY
 	});
 });
 
