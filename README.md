@@ -18,7 +18,7 @@ To install Xamarin.Animations, run the following command in the Package Manager 
 
 The package adds an `AnimateAsync()` extension method to `UIView`*(iOS)* and `View`*(Android)* and `UIElement`*(Windows)*.
 
-To start an animation with an 'IAnimation'.
+To start an animation with an `IAnimation`.
 
 ```csharp
 await view.AnimateAsync(Animations.FadeIn());
