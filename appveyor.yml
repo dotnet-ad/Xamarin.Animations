@@ -10,9 +10,11 @@ assembly_info:
 install: 
   - powershell .\Build\androidsdk-install 25
 build_script:
-- cmd:
-  - cd .\Build
-  - powershell .\build.ps1 -Target Default -Verbosity diagnostic
+- cmd: >-
+
+    cd .\Build
+
+    powershell .\build.ps1 -Target Default -Verbosity diagnostic
 artifacts:
 - path: ./Build/nuget/*.nupkg
   name: NuGet
