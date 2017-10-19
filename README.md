@@ -1,4 +1,4 @@
-# Xamarin.Animations
+![](logo.png)
 
 Those libraries tends to make view animation easier for common scenarios like fade or scale entrance animations.
 
